@@ -1,0 +1,12 @@
+# ServerDiag fleet host list - one host per line.
+#   [user@]host [port=N]
+#   Prefix Windows servers with win:  (needs OpenSSH Server on Windows, built in since Server 2019)
+# Key-based SSH login must work without a password prompt (ssh-copy-id user@host).
+# Linux: for full results the user needs passwordless sudo, otherwise checks run in limited mode.
+
+ubuntu@web-01.example.com
+ubuntu@web-02.example.com
+admin@db-01.internal port=2222
+root@10.0.10.15                     # proxmox VM
+win:administrator@dc01.corp.local   # Windows Server (domain controller)
+win:administrator@hyperv01.corp.local
